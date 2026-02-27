@@ -1,0 +1,4 @@
+=====DEPLOYMENT LINKS FOR BOTH FRONTEND AND BACKEND=====
+
+Backend Link (Render) = https://mern-test-arslan432004-backend.onrender.com/
+Frontend Link (Vercel) = https://mern-test-arslan432004-frontend.vercel.app/
