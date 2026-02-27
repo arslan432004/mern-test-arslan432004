@@ -26,3 +26,17 @@ exports.deleteCourse = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
+exports.updateCourse = async (req, res) => {
+  try {
+    const updated = await Course.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+
+    res.json(updated);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+};
