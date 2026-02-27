@@ -13,7 +13,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const res = await axios.post(
-      "http://localhost:5000/api/auth/login",
+      "https://mern-test-arslan432004-backend.onrender.com/api/auth/login",
       form
     );
     localStorage.setItem("token", res.data.token);

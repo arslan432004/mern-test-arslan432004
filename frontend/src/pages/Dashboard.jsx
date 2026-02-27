@@ -13,7 +13,7 @@ function Dashboard() {
   });
 
   const fetchCourses = async () => {
-    const res = await axios.get("http://localhost:5000/api/courses");
+    const res = await axios.get("https://mern-test-arslan432004-backend.onrender.com/api/courses");
     setCourses(res.data);
   };
 
@@ -22,13 +22,13 @@ function Dashboard() {
   }, []);
 
   const createCourse = async () => {
-    await axios.post("http://localhost:5000/api/courses", course);
+    await axios.post("https://mern-test-arslan432004-backend.onrender.com/api/courses", course);
     setCourse({ courseName: "", courseDescription: "", instructor: "" });
     fetchCourses();
   };
 
   const deleteCourse = async (id) => {
-    await axios.delete(`http://localhost:5000/api/courses/${id}`);
+    await axios.delete(`https://mern-test-arslan432004-backend.onrender.com/api/courses/${id}`);
     fetchCourses();
   };
 
@@ -39,7 +39,7 @@ function Dashboard() {
 
   const updateCourse = async (id) => {
     await axios.put(
-      `http://localhost:5000/api/courses/${id}`,
+      `https://mern-test-arslan432004-backend.onrender.com/api/courses/${id}`,
       editData
     );
     setEditingId(null);
